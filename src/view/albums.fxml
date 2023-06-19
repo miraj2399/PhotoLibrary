@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+
+<AnchorPane fx:id="albums" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AlbumController">
+   <children>
+      <SplitPane dividerPositions="0.3285953177257525" layoutX="125.0" layoutY="52.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="198.0">
+               <children>
+                  <Label alignment="CENTER" text="Albums" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <ListView fx:id="album_list" layoutY="17.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+                  <HBox layoutY="372.0" spacing="5.0" AnchorPane.bottomAnchor="5.0">
+                     <children>
+                        <Button fx:id="album_add" mnemonicParsing="false" onAction="#handle_album_add" prefWidth="40.0" text="Add" />
+                        <Button fx:id="album_delete" mnemonicParsing="false" onAction="#handle_album_delete" text="Delete" />
+                        <Button fx:id="ogout" mnemonicParsing="false" onAction="#handle_logout" text="logout" />
+                     </children>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="button_logout" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <HBox nodeOrientation="LEFT_TO_RIGHT" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Button fx:id="button_slideshow" mnemonicParsing="false" onAction="#handle_button_slideshow" text="slideshow" />
+                        <Button fx:id="button_selectPhotos" mnemonicParsing="false" onAction="#handle_button_selectPhotos" text="Select Photos" />
+                        <Button fx:id="button_addPhotos" mnemonicParsing="false" onAction="#handle_button_addPhotos" text="Add Photos" />
+                        <Button fx:id="button_paste" mnemonicParsing="false" onAction="#handle_button_paste" text="Paste Here" />
+                        <Button fx:id="button_search" mnemonicParsing="false" onAction="#handle_button_search" text="Search" />
+                     </children>
+                  </HBox>
+                  <TilePane fx:id="tile_photos" layoutX="100.0" layoutY="40.0" prefHeight="312.0" prefWidth="398.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0" />               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
